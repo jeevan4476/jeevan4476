@@ -2,6 +2,7 @@
     --bg-color: #f6f6f6;
     --text-color: #191919;
     --accent: #ff5500;
+    --accent-gradient: linear-gradient(135deg, #ff5500, #ff8533);
 }
 
 * {
@@ -11,10 +12,10 @@
 }
 
 body {
-    font-family: "Space Mono", monospace;
+    font-family: "Inter", sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.7;
     padding: 2rem;
     max-width: 900px;
     margin: 0 auto;
@@ -25,10 +26,64 @@ body {
     padding-bottom: 75px;
 }
 
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 header {
     margin-bottom: 2rem;
     border-bottom: 2px solid var(--text-color);
     padding-bottom: 1rem;
+    animation: fadeIn 0.6s ease-out;
 }
 
 .profile {
@@ -54,10 +109,22 @@ header {
 }
 
 .site-title {
+    font-family: "Playfair Display", serif;
     font-weight: 700;
-    letter-spacing: 2px;
-    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-size: 2.2rem;
     text-transform: uppercase;
+    background: var(--accent-gradient);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease infinite;
+    transition: transform 0.3s ease;
+}
+
+.site-title:hover {
+    transform: scale(1.02);
 }
 
 .nav-links {
@@ -66,6 +133,7 @@ header {
 }
 
 .nav-link {
+    font-family: "Space Mono", monospace;
     font-weight: 700;
     text-decoration: none;
     color: var(--text-color);
@@ -73,7 +141,23 @@ header {
     font-size: 0.9rem;
     padding-bottom: 2px;
     border-bottom: 2px solid transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:not(.active):hover::after {
+    width: 100%;
 }
 
 .nav-link.active {
@@ -83,10 +167,11 @@ header {
 
 .nav-link:not(.active):hover {
     color: var(--accent);
-    border-bottom-color: rgba(255, 85, 0, 0.5);
+    transform: translateY(-2px);
 }
 
 main {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 section {
@@ -98,22 +183,31 @@ section:last-child {
 }
 
 .section-title {
+    font-family: "Playfair Display", serif;
     display: inline-block;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 3px solid var(--accent);
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    animation: slideInLeft 0.6s ease-out;
 }
 
 .text {
     margin-bottom: 1.5rem;
+    animation: fadeIn 0.8s ease-out;
 }
 
 strong {
     color: var(--accent);
     font-weight: 700;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+strong:hover {
+    text-shadow: 0 0 10px rgba(255, 85, 0, 0.3);
 }
 
 .list {
@@ -148,19 +242,42 @@ strong {
 
 .project-item {
     margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.6s ease-out both;
 }
+
+.project-item:nth-child(1) { animation-delay: 0.1s; }
+.project-item:nth-child(2) { animation-delay: 0.2s; }
+.project-item:nth-child(3) { animation-delay: 0.3s; }
+.project-item:nth-child(4) { animation-delay: 0.4s; }
 
 .project-item:last-child {
     margin-bottom: 0;
 }
 
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+}
+
 .project-title {
-    font-size: 1.1rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     margin-bottom: 0.75rem;
     color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.project-item:hover .project-title {
+    color: var(--accent);
 }
 
 .project-description {
@@ -180,14 +297,35 @@ strong {
 }
 
 .skill-category-title {
-    font-size: 1rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     margin-bottom: 0.5rem;
     margin-top: 1.5rem;
     color: var(--text-color);
+    position: relative;
+    padding-left: 15px;
+    animation: slideInLeft 0.5s ease-out both;
 }
+
+.skill-category-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 80%;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.skill-category-title:nth-of-type(1) { animation-delay: 0.1s; }
+.skill-category-title:nth-of-type(2) { animation-delay: 0.2s; }
+.skill-category-title:nth-of-type(3) { animation-delay: 0.3s; }
+.skill-category-title:nth-of-type(4) { animation-delay: 0.4s; }
 
 section > .skill-category-title:first-of-type {
     margin-top: 0;
@@ -204,6 +342,7 @@ footer {
     z-index: 1000;
     text-align: center;
     margin-top: 0;
+    backdrop-filter: blur(10px);
 }
 
 .footer-icons {
@@ -217,7 +356,25 @@ footer {
     text-decoration: none;
     color: var(--text-color);
     display: inline-block;
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.footer-icons a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.footer-icons a:hover::after {
+    transform: translateX(-50%) scale(1);
 }
 
 .footer-icons a i {
@@ -227,7 +384,7 @@ footer {
 
 .footer-icons a:hover {
     color: var(--accent);
-    transform: translateY(-3px);
+    transform: translateY(-5px) scale(1.1);
 }
 
 .social-link {
@@ -236,15 +393,35 @@ footer {
     color: var(--text-color);
     border: 2px solid var(--text-color);
     padding: 0.5rem 1rem;
+    font-family: "Space Mono", monospace;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.8rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--text-color);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.social-link:hover::before {
+    left: 0;
 }
 
 .social-link:hover {
-    background-color: var(--text-color);
     color: var(--bg-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hover-container {
@@ -345,5 +522,96 @@ footer {
 
     .footer-icons a i {
         font-size: 1.4rem;
+    }
+}
+
+/* JavaScript Animation Classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ripple effect for buttons */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 85, 0, 0.3);
+    transform: scale(0);
+    animation: ripple-effect 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-effect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Bounce in animation for footer icons */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-5px);
+    }
+    70% {
+        transform: scale(0.9) translateY(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Enhanced divider animation */
+.divider {
+    position: relative;
+    overflow: hidden;
+}
+
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 85, 0, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Strong text hover glow effect - extends base strong styling */
+
+/* Section title typing cursor effect - extends base section-title styling */
+.section-title {
+    border-right: 2px solid var(--accent);
+    animation: blink-cursor 0.8s step-end infinite, slideInLeft 0.6s ease-out;
+}
+
+@keyframes blink-cursor {
+    0%, 50% {
+        border-right-color: var(--accent);
+    }
+    51%, 100% {
+        border-right-color: transparent;
     }
 }
