@@ -1,45 +1,36 @@
-<h1 align="center">Hey 👋 I'm Jeevan</h1>
-<h3 align="center">
-  Solana • Rust 🦀 • Networks • Backend
-</h3>
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Getting Started
 
+First, run the development server:
 
-<p align="center">
-  <a href="https://x.com/_Jeevan_R" target="blank">
-    <img src="https://img.shields.io/twitter/follow/_Jeevan_R?logo=twitter&style=for-the-badge" alt="Twitter Follow" />
-  </a>
-</p>
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- 🔭 I’m currently working with **Solana, Rust, and Backend systems**
-- 🧠 I’m diving deeper into **Distributed systems, low-level systems, and cryptography**
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-<h3 align="left">Connect with me:</h3>
+## Learn More
 
-<p align="left">
-  <a href="https://x.com/_Jeevan_R"><img align="center" src="https://www.svgrepo.com/show/475689/twitter-color.svg" alt="Twitter" height="30" width="40" /></a>
-  &nbsp;
-  <a href="mailto:jeevanr2431@gmail.com"><img align="center" src="https://www.svgrepo.com/show/223047/gmail.svg" alt="Email" height="30" width="40" /></a>
-</p>
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-<h3 align="left">Languages & Tools I Use:</h3>
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-<p align="left">
-  <img src="https://www.svgrepo.com/show/374056/rust.svg" alt="Rust" width="40" height="40"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" width="40" height="40"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="40" height="40"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" width="40" height="40"/>
-  &nbsp;&nbsp;&nbsp;
-  <img src="https://www.svgrepo.com/show/354200/postgresql.svg" alt="PostgreSQL" width="40" height="40"/>
-</p>
+## Deploy on Vercel
 
----
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
