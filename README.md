@@ -1,6 +1,6 @@
 <h1 align="center">Hey 👋 I'm Jeevan</h1>
 <h3 align="center">
-  Solana • Rust 🦀 • Networks • Backend
+  Backend • Rust • Solana • Networks 
 </h3>
 
 
@@ -13,8 +13,8 @@
 
 ---
 
-- 🔭 I’m currently working with **Solana, Rust, and Backend systems**
-- 🧠 I’m diving deeper into **Distributed systems, low-level systems, and cryptography**
+-  I’m currently working with **Solana, Rust, and Backend systems**
+-  I’m diving deeper into **Distributed systems, low-level systems, and cryptography**
 
 ---
 
@@ -31,15 +31,17 @@
 <h3 align="left">Languages & Tools I Use:</h3>
 
 <p align="left">
-  <img src="https://www.svgrepo.com/show/374056/rust.svg" alt="Rust" width="40" height="40"/>
-  &nbsp;&nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" width="40" height="40"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://www.svgrepo.com/show/374056/rust.svg" alt="Rust" width="40" height="40"/>
   &nbsp;&nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="40" height="40"/>
   &nbsp;&nbsp;&nbsp;
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" width="40" height="40"/>
   &nbsp;&nbsp;&nbsp;
   <img src="https://www.svgrepo.com/show/354200/postgresql.svg" alt="PostgreSQL" width="40" height="40"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="40" height="40"/>
 </p>
 
 ---
