@@ -2,7 +2,7 @@
 
 # Hey 👋 I'm Jeevan
 
-### Backend • Rust • Solana • Networks
+### Backend • Rust • Networks
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/_Jeevan_R?logo=twitter&style=for-the-badge)](https://x.com/_Jeevan_R)
 
@@ -12,7 +12,7 @@
 
 ##  About Me
 
--  I’m currently working with **Solana, Rust, and Backend systems**
+-  I’m currently working with **Backend systems, Rust**
 -  I’m diving deeper into **Distributed systems, low-level systems, and cryptography**
 
 ---
@@ -39,6 +39,7 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" width="40" />
   <img src="https://www.svgrepo.com/show/354200/postgresql.svg" width="40" />
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" width="40" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="40" />
 </p>
 
