@@ -43,7 +43,7 @@
 
 ---
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=jeevan4476&theme=github-dark-blue&hide_border=true&background=0d1117" />
+  <img src="https://github-readme-streak-stats-eight.vercel.app?user=jeevan4476&theme=github-dark-blue&hide_border=true&background=0d1117" alt="GitHub Streak" />
 </p>
 
 ---
